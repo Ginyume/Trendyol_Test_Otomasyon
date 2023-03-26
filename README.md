@@ -1,4 +1,4 @@
 # Trendyol_Test_Otomasyon
 
-Chrome'un 110.0.5481.xxx sürümüne göre yapılmıştır.
+Chrome'un 111.0.5563.xxx sürümüne göre yapılmıştır.
 
