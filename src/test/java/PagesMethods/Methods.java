@@ -4,6 +4,8 @@ import BaseTest.BaseTEST;
 import org.checkerframework.checker.units.qual.K;
 import org.openqa.selenium.By;
 
+import java.util.ArrayList;
+
 public class Methods extends BaseTEST {
     public void Navigate(String URL)
     {
@@ -30,4 +32,9 @@ public class Methods extends BaseTEST {
     {
         action.moveToElement(webdriver.findElement(By.xpath(Xpath))).click().perform();
     }
+   public void driverSwitchNewTab(int tabNumber)
+   {
+       ArrayList<String> newTb = new ArrayList<String>(webdriver.getWindowHandles());
+       webdriver.switchTo().window(newTb.get(tabNumber));
+   }
 }

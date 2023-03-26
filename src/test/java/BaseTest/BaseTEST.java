@@ -17,11 +17,12 @@ public class BaseTEST {
     @BeforeAll
     public static void Startup()
     {
+        System.setProperty("webdriver.chrome.driver","chromedriver.exe");
         ChromeOptions options=new ChromeOptions();
        // options.addArguments("headless");
         options.addArguments("disable-popup-blocking");
         options.addArguments("start-maximized");
-        System.setProperty("webdriver.chrome.driver","chromedriver.exe");
+        options.addArguments("--remote-allow-origins=*");
         webdriver=new ChromeDriver(options);
         action= new Actions(webdriver);
         webdriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
